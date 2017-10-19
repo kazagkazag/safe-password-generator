@@ -19,7 +19,7 @@ if(!dictionary) {
     console.log();
 }
 else {
-    generate(path.resolve(`./dictionaries/${dictionary}`));
+    generate(path.join(__dirname, `./dictionaries/${dictionary}`));
 }
 
 function getRandomInt(min, max) {
