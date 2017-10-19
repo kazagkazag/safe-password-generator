@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 const fs = require("fs");
+const path = require("path");
 
 const arguments = process.argv;
 const dictionary = arguments.find(a => {
@@ -18,7 +19,7 @@ if(!dictionary) {
     console.log();
 }
 else {
-    generate(`./dictionaries/${dictionary}`);
+    generate(path.resolve(`./dictionaries/${dictionary}`));
 }
 
 function getRandomInt(min, max) {
